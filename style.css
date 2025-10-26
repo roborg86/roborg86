@@ -1,0 +1,257 @@
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+  scroll-behavior: smooth;
+}
+    body {
+      background: white;
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+    }
+    header {
+      width: 100%;
+      text-align: left;
+      padding-left: 40px;
+      /*padding: 0 0 30px 0;*/
+      background: white;
+    }
+    header h1 {
+      font-size: clamp(80px, 15vw, 300px);
+      font-weight: normal;
+      letter-spacing: 10px;
+      color: #005700;
+    }
+    nav {
+      display: flex;
+      padding-left: 50px;
+      text-align: left;
+      gap: 30px;
+      font-size: 14px;
+      margin-bottom: 0px; /* ← расстояние до заголовка */
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      padding: 5px 10px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #005700;
+    }
+    .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000; /* чтобы меню было поверх всего */
+  padding-left: 40px; /* как у заголовка */
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* лёгкая тень для отделения */
+}
+
+.main-nav nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  /*text-transform: uppercase;*/
+  padding: 15px 0; /* вертикальный отступ */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid #005700;
+}
+    section {
+      margin: 0px 0;
+    }
+    h2 {
+      font-size: 56px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .about-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-flex {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 60px;
+}
+
+.about-text-block {
+  flex: 1;
+}
+
+.about-text-block h2 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding: 0;
+  line-height: 1;
+  
+}
+
+.about-info p {
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+.specializations {
+    margin-top: 75px;
+    max-width: 500px;
+}
+
+.specializations div {
+  font-size: 25px;
+  padding: 8px 0;
+  border-bottom: 2px solid #ddd;
+  margin: 0px;
+  line-height: 1.3;
+}
+.arrow-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+  flex-shrink: 0; /* не сжимается в flex-контейнере */
+}
+section#skills {
+  margin-top: 100px; /* отступ сверху от предыдущего блока */
+  margin-left: 490px;
+}
+
+.skills-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.skills-group {
+  flex: 1;
+}
+
+h2 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  padding: 0;
+  line-height: 1;
+}
+
+.skills-group h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* Отступ сверху от предыдущего блока */
+section#gallery {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;    /* обрезает фото по центру, сохраняя пропорции */
+  border: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+section#experience {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+.experience-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.experience-column {
+  flex: 1;
+}
+
+.experience-column h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+.experience-column p {
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+section#contacts {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+.contacts-content {
+  margin-top: 20px;
+}
+
+.contacts-content p {
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.contacts-content a {
+  color: #005700; /* ваш зелёный */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contacts-content a:hover {
+  border-bottom: 1px solid #005700;
+}
